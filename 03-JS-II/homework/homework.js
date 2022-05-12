@@ -83,7 +83,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  return (numero >= 50 && numero <= 20);
+  return (numero < 50 && numero > 20);
 }
 
 function esEntero(numero) {
@@ -134,6 +134,9 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   bandera = true; //
+  if (numero === 0 || numero === 1) {
+    return false;
+  }
   for (var i = 2; i < numero; i++) {
     if (numero % i === 0) {
       bandera = false;
@@ -147,7 +150,12 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-  return !!valor; 
+  if (valor) {
+    return 'Soy verdadero';
+  } else {
+    return 'Soy falso';
+  }
+  
 }
 
 function tablaDelSeis(){
